@@ -1,10 +1,16 @@
 # Linked Lists
 
+- Links to practise
+  - https://www.geeksforgeeks.org/reverse-a-linked-list/
+
 ## 2.1 Remove Duplicates: 
-description
+explain exercise
+
 
 SOLUTION:
 -
+NOTE:
+I did test a lot of methods and properties of LinkedLists
 
 USEFUL LINKS:
 - Linked list class and node

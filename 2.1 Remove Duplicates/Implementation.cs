@@ -1,50 +1,97 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace _2._1_Remove_Duplicates
 {
-    class Implementation
+    public static class Implementation
     {
         #region common methods
 
-        private int _tapB = 0;
-        private int _tapC = 0;
+        public static Dictionary<string, bool> table = new Dictionary<string, bool>();
 
-        private void Tap(int i)
+        public static LinkedList<string> createLinkedList(string[] words)
         {
-            if (i == 0)
+            LinkedList<string> sentence = new LinkedList<string>(words);
+            DisplayFullLinkedList(sentence, "The linked list values:");
+
+            return sentence;
+        }
+
+        private static void DisplayFullLinkedList(LinkedList<string> words, string intro)
+        {
+            Console.WriteLine(intro);
+            foreach (string word in words)
             {
-                _tapB++;
+                Console.Write("- "+word + " ");
+                Console.WriteLine();
             }
+            Console.WriteLine();
+
+            Console.WriteLine("First Node Details:"); Console.WriteLine();
+            //LD display properties of the last node
+            LinkedListNode<string> mark1 = words.First;
+            DisplayLinkedListNode(mark1);
+
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine("Second Node Details:"); Console.WriteLine();
+            LinkedListNode<string> mark2 = mark1.Next;
+            DisplayLinkedListNode(mark2);
+
+        }
+
+        public static void DisplayLinkedListNode(LinkedListNode<String> lln)
+        {
+            if (lln.List == null)
+                Console.WriteLine("   Node is not linked.");
             else
-            {
-                _tapC++;
-            }
+                Console.WriteLine("   Node belongs to a linked list with {0} elements.", lln.List.Count);
+
+            if (lln.Previous == null)
+                Console.WriteLine("   Previous node is null.");
+            else
+                Console.WriteLine("   Value of previous node: {0}", lln.Previous.Value);
+
+            Console.WriteLine("   Value of current node:  {0}", lln.Value);
+
+            if (lln.Next == null)
+                Console.WriteLine("   Next node is null.");
+            else
+                Console.WriteLine("   Value of next node:     {0}", lln.Next.Value);
+
+            Console.WriteLine();
         }
 
         #endregion
 
-        private void DeleteDuplicatesUsingDictionary(LinkedListNode node)
+        public static LinkedList<string> DeleteDuplicatesInLinkedListUsingDictionary(LinkedList<string> words)
         {
-            var table = new Dictionary<int, bool>();
-            LinkedListNode previous = null;
+            LinkedListNode<String> aNode = words.First;
 
-            while (node != null)
+            LinkedListNode<String> previous = null;
+
+            while (aNode != null)
             {
-                if (table.ContainsKey(node.Data))
-                {
+                if (table.ContainsKey(aNode.Value))
+                { 
                     if (previous != null)
                     {
-                        previous.Next = node.Next;
+                        //LD the connection between modes is keepen automatically
+                        words.Remove(aNode);
                     }
                 }
                 else
                 {
-                    table.Add(node.Data, true);
-                    previous = node;
+                    table.Add(aNode.Value, true);
+                    previous = aNode;
                 }
 
-                node = node.Next;
+                aNode = aNode.Next;
             }
+
+            DisplayFullLinkedList(words, "The linked list after deletion:");
+
+            return words;
         }
 
     }//LD close Implementation class

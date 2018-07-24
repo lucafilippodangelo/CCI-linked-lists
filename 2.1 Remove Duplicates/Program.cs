@@ -2,11 +2,16 @@
 
 namespace _2._1_Remove_Duplicates
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            string[] words = { "the", "fox", "jumped", "over", "the", "dog", "the", "ole", "fox" };
+            var LinkedList = Implementation.createLinkedList(words);
+
+            Implementation.DeleteDuplicatesInLinkedListUsingDictionary(LinkedList);
+
+            Console.ReadLine();
         }
     }
 }
