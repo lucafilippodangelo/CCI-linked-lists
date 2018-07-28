@@ -5,33 +5,17 @@ namespace _2._1_Remove_Duplicates
 {
     public static class Implementation
     {
-        #region common methods
-
-        private static int _tapB = 0;
-        private static int _tapC = 0;
-
-        private static void Tap(int i)
-        {
-            if (i == 0)
-            {
-                _tapB++;
-            }
-            else
-            {
-                _tapC++;
-            }
-        }
+        #region UTILITY METHODS
 
         public static Dictionary<string, bool> table = new Dictionary<string, bool>();
 
-        public static LinkedList<string> createLinkedList(string[] words)
+        public static LinkedList<string> createLinkedListFromArray(string[] words)
         {
             LinkedList<string> sentence = new LinkedList<string>(words);
-            DisplayFullLinkedList(sentence, "The linked list values:");
             return sentence;
         }
 
-        private static void DisplayFullLinkedList(LinkedList<string> words, string intro)
+        public static void displayFullLinkedList(LinkedList<string> words, string intro)
         {
             Console.WriteLine(intro);
             foreach (string word in words)
@@ -57,7 +41,7 @@ namespace _2._1_Remove_Duplicates
 
         }
 
-        public static void DisplayLinkedListNode(LinkedListNode<String> lln)
+        public static void displayLinkedListNode(LinkedListNode<String> lln)
         {
             if (lln.List == null)
                 Console.WriteLine("   Node is not linked.");
@@ -81,7 +65,7 @@ namespace _2._1_Remove_Duplicates
 
         #endregion
 
-        public static LinkedList<string> DeleteDuplicatesInLinkedListUsingDictionary(LinkedList<string> words)
+        public static LinkedList<string> deleteDuplicatesInLinkedListUsingDictionary(LinkedList<string> words)
         {
             LinkedListNode<String> currentNode = words.First;
 
@@ -105,12 +89,10 @@ namespace _2._1_Remove_Duplicates
                     currentNode = currentNode.Next;
                 }
             }
-
-            DisplayFullLinkedList(words, "The linked list after deletion DICTIONARY :");
             return words;
         }
 
-        public static LinkedList<string> DeleteDuplicatesInLinkedListUsingTwoPointers(LinkedList<string> words)
+        public static LinkedList<string> deleteDuplicatesInLinkedListUsingTwoPointers(LinkedList<string> words)
         {
             LinkedListNode<String> head = words.First;
 
@@ -118,16 +100,12 @@ namespace _2._1_Remove_Duplicates
 
             while (current != null)
             {
-                /* Remove all future nodes that have the same value */
                 LinkedListNode<String> runner = current;
               
                 while (runner.Next != null)
                 {
-                    Tap(0);
-
                     if (runner.Next.Value == current.Value)
                     {
-                        //runner.Next = runner.Next.Next;
                         words.Remove(runner.Next);
                     }
                     else
@@ -137,11 +115,8 @@ namespace _2._1_Remove_Duplicates
                 }
                 current = current.Next;
             }
-            DisplayFullLinkedList(words, "The linked list after deletion TWO POINTERS :");
             return words;
         }
-
-
 
     }//LD close Implementation class
 }//LD close namespace

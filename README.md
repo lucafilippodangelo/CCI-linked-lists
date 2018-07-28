@@ -1,15 +1,14 @@
 # Linked Lists
 
-
-
 ## 2.1 Remove Duplicates: 
-explain exercise
-
+Remove duplicates from an unsorted Linked List
 
 SOLUTION:
--
-NOTE: We implement the visit with a while, linked list is not a fixed dimension data structure.
-I did test a lot of methods and properties of LinkedLists
+- In solution one I used a dictionary. I did iterate the linked list saving distinct element and deleting by the way the duplicates. I got a single iteration through the list. It takes O(N) time.
+- In solution two I don't have a buffer but two pointers, a "current" and a "runner"
+the code is commented.
+
+NOTE: We implement the visit with a while, common in not fixed dimension data structure as linked lists.
 
 USEFUL LINKS:
 - Linked list class and node
@@ -18,3 +17,5 @@ USEFUL LINKS:
 
 - Other Exercises
   - https://www.geeksforgeeks.org/reverse-a-linked-list/
+
+## 2.2 Find Kth to last: 
