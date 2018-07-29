@@ -7,6 +7,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "2.1 Remove Duplicates", "2.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2.2 Return Ktk to Last", "2.2 Return Ktk to Last\2.2 Return Ktk to Last.csproj", "{9C4F6484-ECF8-4C52-B348-7509663E3871}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{C0F1204B-DDD9-4028-A85F-89A3EA1D0CCA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2.3 Delete Middle Node", "2.3 Delete Middle Node\2.3 Delete Middle Node.csproj", "{EEE2E10F-2A3F-490D-8C7D-A98509B42A55}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{9C4F6484-ECF8-4C52-B348-7509663E3871}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9C4F6484-ECF8-4C52-B348-7509663E3871}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9C4F6484-ECF8-4C52-B348-7509663E3871}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0F1204B-DDD9-4028-A85F-89A3EA1D0CCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0F1204B-DDD9-4028-A85F-89A3EA1D0CCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0F1204B-DDD9-4028-A85F-89A3EA1D0CCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0F1204B-DDD9-4028-A85F-89A3EA1D0CCA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEE2E10F-2A3F-490D-8C7D-A98509B42A55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEE2E10F-2A3F-490D-8C7D-A98509B42A55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEE2E10F-2A3F-490D-8C7D-A98509B42A55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEE2E10F-2A3F-490D-8C7D-A98509B42A55}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

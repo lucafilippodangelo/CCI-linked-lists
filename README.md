@@ -20,3 +20,9 @@ USEFUL LINKS:
 
 ## 2.2 Find Kth to last: 
 Write a method to find the kth to last element of a singly linked list.
+
+SOLUTION:
+- Recursive approach. The method gets in input the head of the linked list, then recursively visit the all list, then when at the end, increment the static variable "Count".
+- Iterative approach. I used two pointers, the runner goes ahead of "k" positions, then in a while the two pointers advance together. when "runner" is at the ens of the list, the "current" is the "kth" element to return.
+
+## 2.3 Delete Middle Node:
