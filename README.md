@@ -21,8 +21,18 @@ USEFUL LINKS:
 ## 2.2 Find Kth to last: 
 Write a method to find the kth to last element of a singly linked list.
 
+EXAMPLE:
+
+in the list "S1,S2,S3,S4,S5" the "Kth"=3(last but two) is "S3"
+
 SOLUTION:
 - Recursive approach. The method gets in input the head of the linked list, then recursively visit the all list, then when at the end, increment the static variable "Count".
 - Iterative approach. I used two pointers, the runner goes ahead of "k" positions, then in a while the two pointers advance together. when "runner" is at the ens of the list, the "current" is the "kth" element to return.
 
 ## 2.3 Delete Middle Node:
+Implement an algorithm to delete a node in the middle of a single linked list. Giving access only to the middle node
+
+SOLUTION
+- the solution is trivial and therefore not implemented. It's enought check previous and next of the current middle node, if both not null, delete the node.
+
+## 2.4 Partition:
