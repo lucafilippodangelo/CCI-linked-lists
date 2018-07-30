@@ -47,3 +47,5 @@ output 3->1->2->5->8->5->10
 SOLUTION
 - Approach One(not implemented): loop the input linked list and use another two linked lists "smaller" and "equalBiger", insert in one of the two lists depending on the value of the current element. when loop finishes, merge "smaller" and "equalBiger" lists and return.
 - Approach two: loop the input linked list and use another linked list. Insert at head if current element < "k" or tail if current alement >= "k".
+
+## 2.5 Sum Lists:
