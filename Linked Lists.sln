@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2.4 Partition", "2.4 Partition\2.4 Partition.csproj", "{547B4FC0-4F0B-4EE5-B34B-A7EA1A633F99}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2.5 Sum Lists", "2.5 Sum Lists\2.5 Sum Lists.csproj", "{314776A3-DB5E-4880-B0C1-F43B5AEAB14F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{547B4FC0-4F0B-4EE5-B34B-A7EA1A633F99}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{547B4FC0-4F0B-4EE5-B34B-A7EA1A633F99}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{547B4FC0-4F0B-4EE5-B34B-A7EA1A633F99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{314776A3-DB5E-4880-B0C1-F43B5AEAB14F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{314776A3-DB5E-4880-B0C1-F43B5AEAB14F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{314776A3-DB5E-4880-B0C1-F43B5AEAB14F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{314776A3-DB5E-4880-B0C1-F43B5AEAB14F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
