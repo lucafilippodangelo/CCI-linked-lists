@@ -36,3 +36,14 @@ SOLUTION
 - the solution is trivial and therefore not implemented. It's enought check previous and next of the current middle node, if both not null, delete the node.
 
 ## 2.4 Partition:
+Given a linked list and a value "k", return a linked list where all the element smaller than "k" are before than "k" and all the element equal or bigger than "k" are after the smaller. No matter the order. 
+
+EXAMPLE:
+
+input 3->5->8->5->10->2->1 with "k"=5
+
+output 3->1->2->5->8->5->10
+
+SOLUTION
+- Approach One(not implemented): loop the input linked list and use another two linked lists "smaller" and "equalBiger", insert in one of the two lists depending on the value of the current element. when loop finishes, merge "smaller" and "equalBiger" lists and return.
+- Approach two: loop the input linked list and use another linked list. Insert at head if current element < "k" or tail if current alement >= "k".

@@ -15,6 +15,12 @@ namespace Common
             return sentence;
         }
 
+        public static LinkedList<int> createLinkedListFromArrayInt(int[] numbers)
+        {
+            LinkedList<int> numbersLinkedList = new LinkedList<int>(numbers);
+            return numbersLinkedList;
+        }
+
         public static void displayFullLinkedList(LinkedList<string> words, string intro)
         {
             Console.WriteLine(intro);
@@ -38,6 +44,18 @@ namespace Common
             LinkedListNode<string> mark2 = mark1.Next;
             DisplayLinkedListNode(mark2);
             */
+
+        }
+
+        public static void displayFullLinkedListInt(LinkedList<int> words, string intro)
+        {
+            Console.WriteLine(intro);
+            foreach (int value in words)
+            {
+                Console.Write("- " + value + " ");
+                Console.WriteLine();
+            }
+            Console.WriteLine();
 
         }
 
