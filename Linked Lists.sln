@@ -5,13 +5,15 @@ VisualStudioVersion = 15.0.27703.2035
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "2.1 Remove Duplicates", "2.1 Remove Duplicates\2.1 Remove Duplicates.csproj", "{406E9F3F-34DC-4A36-B8E0-04B043162C76}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2.2 Return Ktk to Last", "2.2 Return Ktk to Last\2.2 Return Ktk to Last.csproj", "{9C4F6484-ECF8-4C52-B348-7509663E3871}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "2.2 Return Ktk to Last", "2.2 Return Ktk to Last\2.2 Return Ktk to Last.csproj", "{9C4F6484-ECF8-4C52-B348-7509663E3871}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{C0F1204B-DDD9-4028-A85F-89A3EA1D0CCA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common", "Common\Common.csproj", "{C0F1204B-DDD9-4028-A85F-89A3EA1D0CCA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2.4 Partition", "2.4 Partition\2.4 Partition.csproj", "{547B4FC0-4F0B-4EE5-B34B-A7EA1A633F99}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "2.4 Partition", "2.4 Partition\2.4 Partition.csproj", "{547B4FC0-4F0B-4EE5-B34B-A7EA1A633F99}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2.5 Sum Lists", "2.5 Sum Lists\2.5 Sum Lists.csproj", "{314776A3-DB5E-4880-B0C1-F43B5AEAB14F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "2.5 Sum Lists", "2.5 Sum Lists\2.5 Sum Lists.csproj", "{314776A3-DB5E-4880-B0C1-F43B5AEAB14F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2.6 Palindrome", "2.6 Palindrome\2.6 Palindrome.csproj", "{7BBAF11F-DAC4-495E-BCBC-122FD08389CD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{314776A3-DB5E-4880-B0C1-F43B5AEAB14F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{314776A3-DB5E-4880-B0C1-F43B5AEAB14F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{314776A3-DB5E-4880-B0C1-F43B5AEAB14F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BBAF11F-DAC4-495E-BCBC-122FD08389CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BBAF11F-DAC4-495E-BCBC-122FD08389CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BBAF11F-DAC4-495E-BCBC-122FD08389CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BBAF11F-DAC4-495E-BCBC-122FD08389CD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

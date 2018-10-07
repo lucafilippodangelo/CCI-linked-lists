@@ -55,9 +55,10 @@ EXAMPLE:
 
 input 
 
-7 > 1 > 6
-5 > 9 > 2
+7 > 1 > 6, 5 > 9 > 2
 
 SOLUTION
 - first time I add 7+5, result is 12, I write "2" as first element in the list and carry "1". The code is well commented.
  
+## 2.6 Palindrome:
+--

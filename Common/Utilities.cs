@@ -81,6 +81,45 @@ namespace Common
             Console.WriteLine();
         }
 
+        public static LinkedList<int> copyLinkedList(LinkedList<int> lList)
+        {
+            LinkedList<int> supportLinkedListInOutput = new LinkedList<int>();
+
+            //LD I can iterate getting the numeric value and I can inside the for create the node specifying the value of the node I'm goung to create 
+            foreach ( int lln in lList)
+            {
+                supportLinkedListInOutput.AddLast(lln);
+            }
+            return supportLinkedListInOutput;
+        }
+
+        public static LinkedList<int> reverseInputLinkedList(LinkedList<int> inputLinkedList)
+        {
+            LinkedList<int> supportLinkedListInOutput = new LinkedList<int>();
+            var supportLinkedListInInput = copyLinkedList(inputLinkedList);
+
+            while (supportLinkedListInInput.Count != 0)
+            {
+                supportLinkedListInOutput.AddLast(supportLinkedListInInput.Last.Value);
+                supportLinkedListInInput.RemoveLast();
+            }
+
+            return supportLinkedListInOutput;
+        }
+
+        public static bool areLinkedListEqual(LinkedListNode<int> l1, LinkedListNode<int> l2)
+        {
+            while (l1 != null && l2 != null)
+            {
+                if (l1.Value != l2.Value)
+                {
+                    return false;
+                }
+                l1 = l1.Next;
+                l2 = l2.Next;
+            }
+            return true;
+        }
         #endregion
     }
 }
