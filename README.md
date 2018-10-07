@@ -49,3 +49,15 @@ SOLUTION
 - Approach two: loop the input linked list and use another linked list. Insert at head if current element < "k" or tail if current alement >= "k".
 
 ## 2.5 Sum Lists:
+Given two linked lists whre each nore contains a sigle digit and the digit are stored in reverse order, create a function that adds the two and returns the sum linked list.
+
+EXAMPLE:
+
+input 
+
+7 > 1 > 6
+5 > 9 > 2
+
+SOLUTION
+- first time I add 7+5, result is 12, I write "2" as first element in the list and carry "1". The code is well commented.
+ 
