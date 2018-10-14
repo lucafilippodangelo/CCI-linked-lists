@@ -93,7 +93,7 @@ namespace Common
             return supportLinkedListInOutput;
         }
 
-        public static LinkedList<int> reverseInputLinkedList(LinkedList<int> inputLinkedList)
+        public static LinkedList<int> reverseLinkedList(LinkedList<int> inputLinkedList)
         {
             LinkedList<int> supportLinkedListInOutput = new LinkedList<int>();
             var supportLinkedListInInput = copyLinkedList(inputLinkedList);
@@ -120,6 +120,7 @@ namespace Common
             }
             return true;
         }
+
         #endregion
     }
 }

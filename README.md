@@ -61,4 +61,11 @@ SOLUTION
 - first time I add 7+5, result is 12, I write "2" as first element in the list and carry "1". The code is well commented.
  
 ## 2.6 Palindrome:
---
+Implement a function to check if a linked list is palindrome
+
+SOLUTION
+- First(Implemented "//LD 2.6_1"). Just reverse the linked list and iteratively check if the original and reverded linked lists are equal.
+- Second A, uses a stack, we know lenght of the list. We put half of it in a stack and then compare the second half of the list pulling each item of the stack. If we complete an iteration without finding a difference then the linked list is palindrome. 
+- Second B(Implemented "//LD 2.6_2"), uses a stack, we don't know lenght of the list. It's possible to use the "fast runner/ slow runner" technique when iterate. When the fast runner reach the end of the list we know that the slow runner is at the middle.
+  - logic: in each while iteration -> check upfront fast pointer current status, if ok(fast!=0 and fast.next!=0) -> push current slow and update pointers (slow+1,fast+2)
+- Third(Implemented "//LD 2.6_3")
