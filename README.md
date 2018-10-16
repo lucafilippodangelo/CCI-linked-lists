@@ -64,8 +64,24 @@ SOLUTION
 Implement a function to check if a linked list is palindrome
 
 SOLUTION
-- First(Implemented "//LD 2.6_1"). Just reverse the linked list and iteratively check if the original and reverded linked lists are equal.
-- Second A, uses a stack, we know lenght of the list. We put half of it in a stack and then compare the second half of the list pulling each item of the stack. If we complete an iteration without finding a difference then the linked list is palindrome. 
+- First(Implemented "//LD 2.6_1"). 
+  - Just reverse the linked list and iteratively check if the original and reverded linked lists are equal.
+- Second A, uses a stack, we know lenght of the list. 
+  - We put half of it in a stack and then compare the second half of the list pulling each item of the stack. If we complete an iteration without finding a difference then the linked list is palindrome. 
 - Second B(Implemented "//LD 2.6_2"), uses a stack, we don't know lenght of the list. It's possible to use the "fast runner/ slow runner" technique when iterate. When the fast runner reach the end of the list we know that the slow runner is at the middle.
-  - logic: in each while iteration -> check upfront fast pointer current status, if ok(fast!=0 and fast.next!=0) -> push current slow and update pointers (slow+1,fast+2)
-- Third(Implemented "//LD 2.6_3")
+  - In each while iteration -> check upfront fast pointer current status, if ok(fast!=0 and fast.next!=0) -> push current slow and update pointers (slow+1,fast+2)
+- Third(Implemented "//LD 2.6_3"), recursive.
+  - the code is commented, and I took notes in the book at page 218, 219.
+  - other interesting solutions available here -> https://github.com/careercup/CtCI-6th-Edition-CSharp/blob/master/Ch%2002.%20Linked%20Lists/Q2_06_Palindrome.cs
+    - This solution takes advantage of the LIFO (Last In First Out) and FIFO (First In First Out) buffers. 
+      - The idea is that we fill both of the buffers with the same nodes
+      - and then we take the nodes back from each and compare them. 
+      - Since LIFO will return a node from the end of the list and
+      - FIFO will return the node from the start, we are able to check if 
+      - the Linked List is a palindrome.
+	- another recursive approach (Implemented "//LD 2.6_4")
+	  -  We traverse the Linked List to the end while keeping a reference of the first node.
+      - Palindrome check begins when we recurse to the end of the Linked List:
+      - 1) Compare the two nodes (one from start and one from the back)
+      - 2) Advance the "front" node because by recursing back we get the node before "back"
+      - 3) Return isPalindrome

@@ -72,6 +72,103 @@ namespace _2._6_Palindrome
             return true;
         }
 
-        //LD 2.6_3 
+        //LD 2.6_3 support class
+        private class Result
+        {
+            public LinkedListNode<int> Node;
+            public bool result;
+
+            public Result(LinkedListNode<int> node, bool res)
+            {
+                Node = node;
+                result = res;
+            }
+        }
+
+        //LD 2.6_3 enter method
+        public static bool isLinkedListPalindromeApproachThree(LinkedListNode<int> head)
+        {
+            var size = 0;
+            var node = head;
+
+            while (node != null)
+            {
+                size++;
+                node = node.Next;
+            }
+
+            var palindrome = IsPalindromeRecurse(head, size);
+
+            return palindrome.result;
+        }
+
+        //LD 2.6_3 recursion
+        private static Result IsPalindromeRecurse(LinkedListNode<int> head, int length)
+        {
+            //LD basic check
+            if (head == null || length == 0)
+            {
+                return new Result(null, true);
+            }
+
+            //LD we are in th middle of the list, ODD number of nodes
+            if (length == 1)
+            {
+                return new Result(head.Next, true);
+            }
+
+            //LD we are in th middle of the list, EVEN number of nodes
+            if (length == 2)
+            {
+                return new Result(head.Next.Next, head.Value == head.Next.Value); //LD return two node on the right and 
+            }
+
+            //LD main recursive call, we go down until we get the center of the list
+            var res = IsPalindromeRecurse(head.Next, length - 2);
+
+            if (!res.result || res.Node == null)
+            {
+                return res; // Only "result" member is actually used in the call stack.
+            }
+
+            res.result = head.Value == res.Node.Value; //LD the result(boolean) is the comparison between the current "head" and the returned node result from the previous recursive call.
+            res.Node = res.Node.Next; //LD then we pass reference to the the next node of the node returned bu the previous recursive call
+
+            return res;
+        }
+
+        //LD 2.6_4 
+        /// <summary>
+        /// Another recursive approach.
+        /// 
+        /// We traverse the Linked List to the end while keeping a reference of the first node.
+        /// Palindrome check begins when we recurse to the end of the Linked List:
+        /// 1) Compare the two nodes (one from start and one from the back)
+        /// 2) Advance the "front" node because by recursing back we get the node before "back"
+        /// 3) Return isPalindrome
+        /// </summary>
+        /// <param name="head">First node of the Linked List</param>
+        /// <returns></returns>
+        private bool isLinkedListPalindromeApproachFour(LinkedListNode<int> head)
+        {
+            return (head == null) || (head.Next == null) || IsPalindromeFourRecurse(ref head, head.Next);
+        }
+
+        private bool IsPalindromeFourRecurse(ref LinkedListNode<int> front, LinkedListNode<int> back)
+        {
+            bool isPalindrome = true;
+
+            if (back.Next != null)
+                isPalindrome = IsPalindromeFourRecurse(ref front, back.Next); 
+
+            //LD I got at the end of the list
+
+            //LD "x &= y" equal to "x = x & y" where "The & operator performs a bitwise logical AND operation on integral operands and logical AND on bool operands."
+            isPalindrome &= front.Value == back.Value;
+
+            front = front.Next;
+            return isPalindrome;
+        }
+
     }
 }
