@@ -121,6 +121,10 @@ namespace Common
             return true;
         }
 
+        public static int getLinkedListLenght(LinkedList<int> inputLinkedList)
+        {
+            return inputLinkedList.Count;
+        }
         #endregion
     }
 }
