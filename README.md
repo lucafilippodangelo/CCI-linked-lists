@@ -54,8 +54,8 @@ Given two linked lists whre each nore contains a sigle digit and the digit are s
 EXAMPLE:
 
 input 
-
-7 > 1 > 6, 5 > 9 > 2
+- 7 > 1 > 6
+- 5 > 9 > 2
 
 SOLUTION
 - first time I add 7+5, result is 12, I write "2" as first element in the list and carry "1". The code is well commented.
@@ -85,3 +85,12 @@ SOLUTION
       - 1) Compare the two nodes (one from start and one from the back)
       - 2) Advance the "front" node because by recursing back we get the node before "back"
       - 3) Return isPalindrome
+
+## 2.7 Intersection:
+Given two single linked list, detect if reference to "x" and "y" node they intersect
+
+EXAMPLE:
+
+input 
+- 3 > 1 > 5 > 9 > 7 > 2 > 1
+-         4 > 6 > 7 > 2 > 1

@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "2.4 Partition", "2.4 Partit
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "2.5 Sum Lists", "2.5 Sum Lists\2.5 Sum Lists.csproj", "{314776A3-DB5E-4880-B0C1-F43B5AEAB14F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2.6 Palindrome", "2.6 Palindrome\2.6 Palindrome.csproj", "{7BBAF11F-DAC4-495E-BCBC-122FD08389CD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "2.6 Palindrome", "2.6 Palindrome\2.6 Palindrome.csproj", "{7BBAF11F-DAC4-495E-BCBC-122FD08389CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2.7 Intersection", "2.7 Intersection\2.7 Intersection.csproj", "{1663333F-22CA-4D16-9FEE-D96370222235}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{7BBAF11F-DAC4-495E-BCBC-122FD08389CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7BBAF11F-DAC4-495E-BCBC-122FD08389CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7BBAF11F-DAC4-495E-BCBC-122FD08389CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1663333F-22CA-4D16-9FEE-D96370222235}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1663333F-22CA-4D16-9FEE-D96370222235}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1663333F-22CA-4D16-9FEE-D96370222235}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1663333F-22CA-4D16-9FEE-D96370222235}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
