@@ -33,8 +33,10 @@ namespace _2._6_Palindrome
             var l5 = Common.Utilities.createLinkedListFromArrayInt(n5);
             //Common.Utilities.displayFullLinkedListInt(l5, "Palindrome Linked List Creation: ");
 
+            //LD TESTS -----
+
             //LD test Implementation ONE
-            Console.WriteLine("Implementation ONE List ONE is palindrome? "+Implementation .isLinkedListPalindromeApproachOne (l1)); //LD true expected
+            Console.WriteLine("Implementation ONE List ONE is palindrome? " + Implementation.isLinkedListPalindromeApproachOne(l1)); //LD true expected
             Console.WriteLine("Implementation ONE List TWO is palindrome? " + Implementation.isLinkedListPalindromeApproachOne(l2)); //LD false expected
 
             //LD test Implementation TWO
@@ -44,6 +46,10 @@ namespace _2._6_Palindrome
             Console.WriteLine("Implementation TWO List FOUR is palindrome? " + Implementation.isLinkedListPalindromeApproachTwo(l4)); //LD true expected
             Console.WriteLine("Implementation TWO List FIVE is palindrome? " + Implementation.isLinkedListPalindromeApproachTwo(l5)); //LD false expected
 
+            //LD test Implementation FOUR
+            Console.WriteLine("Implementation FOUR List ONE is palindrome? " + Implementation.isLinkedListPalindromeApproachFour(l1.First )); //LD true expected
+            Console.WriteLine("Implementation FOUR List THREE is palindrome? " + Implementation.isLinkedListPalindromeApproachFour(l3.First)); //LD true expected
+            Console.WriteLine("Implementation FOUR List FIVE is palindrome? " + Implementation.isLinkedListPalindromeApproachFour(l5.First)); //LD false expected
 
             Console.ReadLine();
         }

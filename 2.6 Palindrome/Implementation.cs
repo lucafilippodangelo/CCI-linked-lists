@@ -149,13 +149,14 @@ namespace _2._6_Palindrome
         /// </summary>
         /// <param name="head">First node of the Linked List</param>
         /// <returns></returns>
-        private bool isLinkedListPalindromeApproachFour(LinkedListNode<int> head)
+        public static bool isLinkedListPalindromeApproachFour(LinkedListNode<int> head)
         {
             return (head == null) || (head.Next == null) || IsPalindromeFourRecurse(ref head, head.Next);
         }
 
-        private bool IsPalindromeFourRecurse(ref LinkedListNode<int> front, LinkedListNode<int> back)
+        private static bool IsPalindromeFourRecurse(ref LinkedListNode<int> front, LinkedListNode<int> back)
         {
+            //LD this variable is setted at the first interation.
             bool isPalindrome = true;
 
             if (back.Next != null)
@@ -163,8 +164,10 @@ namespace _2._6_Palindrome
 
             //LD I got at the end of the list
 
-            //LD "x &= y" equal to "x = x & y" where "The & operator performs a bitwise logical AND operation on integral operands and logical AND on bool operands."
-            isPalindrome &= front.Value == back.Value;
+            //LD "x &= y" equal to "x = x & y" where "The & operator performs logical AND on bool operands."
+            // so we compare the current front and back value. The back value goes ahead with the recursive call, the front ref starts from the beginning and is passed down,
+            // any call back to the top, advance the reference of the "front".
+            isPalindrome &= (front.Value == back.Value);
 
             front = front.Next;
             return isPalindrome;
