@@ -92,10 +92,13 @@ Given two single linked list, detect if reference to "x" and "y" node they inter
 EXAMPLE:
 
 input 
-- 3 > 1 > 5 > 9 > 7 > 2 > 1
--         4 > 6 > 7 > 2 > 1
+
+```
+3 > 1 > 5 > 9 > 7 > 2 > 1
+        4 > 6 > 7 > 2 > 1
+```
 
 SOLUTION (Implemented //LD 2.7_1)
-- 1) compare the tails, if they are different(by reference, not by value), return immediately. There is not intersection
-- 2) set two pointers at start of linked lists and advance by the difference in lenghts.
-- 3) traverse the two linked lists until the pointers are the same.
+1) compare the tails, if they are different(by reference, not by value), return immediately. There is not intersection
+2) set two pointers at start of linked lists and advance by the difference in lenghts.
+3) traverse the two linked lists until the pointers are the same.
