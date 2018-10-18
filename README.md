@@ -16,7 +16,7 @@ USEFUL LINKS:
   - https://msdn.microsoft.com/en-us/library/ahf4c754(v=vs.110).aspx
 
 - Other Exercises
-  - https://www.geeksforgeeks.org/reverse-a-linked-list/
+  - [one](https://www.geeksforgeeks.org/reverse-a-linked-list/)
 
 ## 2.2 Find Kth to last: 
 Write a method to find the kth to last element of a singly linked list.
@@ -39,10 +39,10 @@ SOLUTION
 Given a linked list and a value "k", return a linked list where all the element smaller than "k" are before than "k" and all the element equal or bigger than "k" are after the smaller. No matter the order. 
 
 EXAMPLE:
-
+```
 input 3->5->8->5->10->2->1 with "k"=5
-
 output 3->1->2->5->8->5->10
+```
 
 SOLUTION
 - Approach One(not implemented): loop the input linked list and use another two linked lists "smaller" and "equalBiger", insert in one of the two lists depending on the value of the current element. when loop finishes, merge "smaller" and "equalBiger" lists and return.
@@ -54,8 +54,10 @@ Given two linked lists whre each nore contains a sigle digit and the digit are s
 EXAMPLE:
 
 input 
-- 7 > 1 > 6
-- 5 > 9 > 2
+```
+7 > 1 > 6
+5 > 9 > 2
+```
 
 SOLUTION
 - first time I add 7+5, result is 12, I write "2" as first element in the list and carry "1". The code is well commented.
@@ -72,8 +74,8 @@ SOLUTION
   - In each while iteration -> check upfront fast pointer current status, if ok(fast!=0 and fast.next!=0) -> push current slow and update pointers (slow+1,fast+2)
 - Third(Implemented "//LD 2.6_3"), recursive.
   - the code is commented, and I took notes in the book at page 218, 219.
-  - other interesting solutions available here -> https://github.com/careercup/CtCI-6th-Edition-CSharp/blob/master/Ch%2002.%20Linked%20Lists/Q2_06_Palindrome.cs
-    - This solution takes advantage of the LIFO (Last In First Out) and FIFO (First In First Out) buffers. 
+  - [Other interesting solutions available here](https://github.com/careercup/CtCI-6th-Edition-CSharp/blob/master/Ch%2002.%20Linked%20Lists/Q2_06_Palindrome.cs)
+  - This solution takes advantage of the LIFO (Last In First Out) and FIFO (First In First Out) buffers. 
       - The idea is that we fill both of the buffers with the same nodes
       - and then we take the nodes back from each and compare them. 
       - Since LIFO will return a node from the end of the list and
