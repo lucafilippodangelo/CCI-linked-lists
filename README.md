@@ -93,8 +93,7 @@ Given two single linked list, detect if reference to "x" and "y" node they inter
 
 EXAMPLE:
 
-input 
-
+INPUT
 ```
 3 > 1 > 5 > 9 > 7 > 2 > 1
         4 > 6 > 7 > 2 > 1
@@ -104,3 +103,29 @@ SOLUTION (Implemented //LD 2.7_1)
 1) compare the tails, if they are different(by reference, not by value), return immediately. There is not intersection
 2) set two pointers at start of linked lists and advance by the difference in lenghts.
 3) traverse the two linked lists until the pointers are the same.
+
+## 2.8 Loop Detection:
+Given a circular linked list, implement an algorithm that returns the node at the beginning of the loop.
+
+INPUT 
+```
+A>B>C>D>E>C [same "C"]
+
+```
+
+OUTPUT 
+```
+C
+
+```
+
+SOLUTION (Implemented //LD 2.8_1, notes in book):
+1) detect if linked list has a loop
+2) detect when the two pointers collide
+3) think to logic on how to find the start of the loop(will be "K" steps)
+4) move one of the two nodes from the collision spot to the head of the linked list, move both by one step per time. they will meet at the head of the loop
+
+NOTE:
+- it was not possible to create a loop in the input list to cinsume in the implemented method, because it's not possible to create a loop just by doing "//LD 2.8_1_loopCreation", because the property is readonly. 
+  - [this is the implementation to create a circular linked list](https://navaneethkn.wordpress.com/2009/08/18/circular-linked-list/#more-197)
+- [Other approaches](https://www.geeksforgeeks.org/detect-loop-in-a-linked-list/)

@@ -19,16 +19,15 @@ namespace _2._1_Remove_Duplicates
                 { 
                     if (previous != null)
                     {
-                        //LD the connection between modes is keepen automatically
-                        words.Remove(currentNode);
-                        currentNode = previous.Next;
+                        words.Remove(currentNode);//LD the connection between modes is keepen automatically
+                        currentNode = previous.Next; //LD pointer
                     }
                 }
                 else
                 {
                     table.Add(currentNode.Value, true);
-                    previous = currentNode;
-                    currentNode = currentNode.Next;
+                    previous = currentNode; //LD pointer
+                    currentNode = currentNode.Next; //LD pointer
                 }
             }
             return words;
